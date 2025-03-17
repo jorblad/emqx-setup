@@ -22,3 +22,10 @@ spec:
       spec:
          type: LoadBalancer
          loadBalancerIP: 192.168.254.16
+   updateStrategy:
+      evacuationStrategy:
+         connEvictRate: 1000
+         sessEvictRate: 1000
+         waitTakeover: 10
+      initialDelaySeconds: 10
+      type: Recreate
