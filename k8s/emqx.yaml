@@ -7,7 +7,6 @@ spec:
    serviceTemplate:
       spec:
         type: LoadBalancer
-        loadBalancerIP: 192.168.254.15
    dashboardServiceTemplate:
       spec:
         type: LoadBalancer
