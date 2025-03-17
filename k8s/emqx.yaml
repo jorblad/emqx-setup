@@ -5,20 +5,20 @@ metadata:
 spec:
    image: emqx:5
    coreTemplate:
-       spec:
+      spec:
          volumeClaimTemplates:
-           storageClassName: standard
-           resources:
-             requests:
-               storage: 20Mi
-           accessModes:
-             - ReadWriteOnce
-         replicas: 3
-     listenersServiceTemplate:
-       spec:
-         type: LoadBalancer
-         loadBalancerIP: 192.168.254.15
+            storageClassName: standard
+            resources:
+               requests:
+                  storage: 20Mi
+            accessModes:
+               - ReadWriteOnce
+      replicas: 3
+      listenersServiceTemplate:
+         spec:
+            type: LoadBalancer
+            loadBalancerIP: 192.168.254.15
       dashboardServiceTemplate:
          spec:
-           type: LoadBalancer
-           loadBalancerIP: 192.168.254.16
+            type: LoadBalancer
+            loadBalancerIP: 192.168.254.16
